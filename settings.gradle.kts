@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "MyInjectionDependency"
+rootProject.name = "SimplifyInjections"
 include(":app")
  

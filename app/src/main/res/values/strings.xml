@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyInjectionDependency</string>
+    <string name="app_name">SimplifyInjections</string>
 
     <!-- Main -->
     <string name="main_welcome_title">Seja Bem Vindo</string>

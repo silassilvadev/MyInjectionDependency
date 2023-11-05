@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.myinjectiondependency"
+    namespace = "com.example.simplifyinjections"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.myinjectiondependency"
+        applicationId = "com.example.simplifyinjections"
         minSdk = 24
         targetSdk = 33
         versionCode = 1
