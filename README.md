@@ -1,4 +1,4 @@
-# 💉 Estrutura simplificado para injeção de dependências
+# 💉 Estrutura simplificada para injeção de dependências
 
 ### Descrição
 
