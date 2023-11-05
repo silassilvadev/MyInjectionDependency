@@ -13,6 +13,6 @@ internal class ContractDataSourceImpl : ContractDataSource {
     }
 
     override fun putContract(contractId: String) {
-        currentContract = contractId
+        currentContract = "Local: $contractId"
     }
 }
