@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 import com.example.simplifyinjections.di.factory.ModuleFactory
 import com.example.simplifyinjections.di.factory.factoryViewModel
 
-internal object SimplifyInjectionsModuleContext {
+internal object ModulesContext {
 
     private const val DEFINITION_NOT_FOUND_MESSAGE =
         "Definition not found. Check your class definitions"

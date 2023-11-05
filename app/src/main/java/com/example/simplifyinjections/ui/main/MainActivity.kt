@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import com.example.simplifyinjections.R
-import com.example.simplifyinjections.di.SimplifyInjectionsModuleContext.viewModel
+import com.example.simplifyinjections.di.ModulesContext.viewModel
 
 class MainActivity : AppCompatActivity() {
 
