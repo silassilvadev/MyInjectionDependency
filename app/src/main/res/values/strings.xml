@@ -2,9 +2,9 @@
     <string name="app_name">SimplifyInjections</string>
 
     <!-- Main -->
-    <string name="main_welcome_title">Seja Bem Vindo</string>
+    <string name="main_welcome_title">Bem vindo\n\nInjete suas dependências!</string>
     <string name="main_contract_text">Contrato: %1s</string>
     <string name="main_contract_text_error">Erro ao buscar contrato</string>
-    <string name="main_load_contracts_button">Carregar Contratos</string>
+    <string name="main_load_contracts_button">Carregar Contrato</string>
 
 </resources>
