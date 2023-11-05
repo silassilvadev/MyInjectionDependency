@@ -1,4 +1,4 @@
-# Exemplo de estrutura simplificado para injeção de dependência
+# 🏗️ Exemplo de estrutura simplificado para injeção de dependência
 
 ### Descrição
 
