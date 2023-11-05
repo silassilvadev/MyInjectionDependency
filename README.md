@@ -81,4 +81,7 @@ class MainActivity : AppCompatActivity() {
 
 ### Evidências
 
+O exemplo abaixo usa alguns mocks locais para mostrar alguns exemplos de situações comnuns a grande 
+maioria dos aplicativos.
+
 <img src="docs/gifs/simplify-injections-record.gif" width="240">
