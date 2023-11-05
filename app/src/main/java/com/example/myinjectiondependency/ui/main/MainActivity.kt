@@ -8,13 +8,7 @@ import android.widget.TextView
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import com.example.myinjectiondependency.R
-import com.example.myinjectiondependency.data.local.MyInjectionDataSource
-import com.example.myinjectiondependency.data.local.MyInjectionDataSourceImpl
-import com.example.myinjectiondependency.data.remote.MyInjectionService
-import com.example.myinjectiondependency.data.remote.MyInjectionServiceMock
-import com.example.myinjectiondependency.data.repository.MainRepository
-import com.example.myinjectiondependency.data.repository.MainRepositoryImpl
-import com.example.myinjectiondependency.domain.usecase.MainUseCase
+import com.example.myinjectiondependency.di.MyInjectionModuleContext.viewModel
 
 class MainActivity : AppCompatActivity() {
 
@@ -30,13 +24,7 @@ class MainActivity : AppCompatActivity() {
         findViewById(R.id.main_button_load_contract)
     }
 
-    private val service: MyInjectionService = MyInjectionServiceMock()
-    private val dataSource: MyInjectionDataSource = MyInjectionDataSourceImpl()
-    private val repository: MainRepository = MainRepositoryImpl(dataSource, service)
-    private val useCase = MainUseCase(repository)
-    private val mainViewModel: MainViewModel by lazy {
-        MainViewModel(useCase)
-    }
+    private val mainViewModel: MainViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
