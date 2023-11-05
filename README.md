@@ -81,4 +81,4 @@ class MainActivity : AppCompatActivity() {
 
 ### Evidências
 
-![](docs/gifs/simplify-injections-record.gif =540x1200)
+![](docs/gifs/simplify-injections-record.gif)
