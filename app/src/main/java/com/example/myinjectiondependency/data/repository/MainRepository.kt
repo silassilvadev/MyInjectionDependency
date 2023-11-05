@@ -1,7 +1,8 @@
 package com.example.myinjectiondependency.data.repository
 
-import com.example.myinjectiondependency.domain.model.MainResponse
+import com.example.myinjectiondependency.data.Result
+import com.example.myinjectiondependency.domain.model.ContractResponse
 
 internal interface MainRepository {
-    suspend fun loadContracts(): MainResponse
+    suspend fun getContracts(): Result<ContractResponse>
 }

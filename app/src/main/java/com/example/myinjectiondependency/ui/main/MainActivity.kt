@@ -8,9 +8,12 @@ import android.widget.TextView
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import com.example.myinjectiondependency.R
+import com.example.myinjectiondependency.data.local.MyInjectionDataSource
+import com.example.myinjectiondependency.data.local.MyInjectionDataSourceImpl
+import com.example.myinjectiondependency.data.remote.MyInjectionService
+import com.example.myinjectiondependency.data.remote.MyInjectionServiceMock
 import com.example.myinjectiondependency.data.repository.MainRepository
-import com.example.myinjectiondependency.data.repository.MainResponseImpl
-import com.example.myinjectiondependency.domain.model.MainResponse
+import com.example.myinjectiondependency.data.repository.MainRepositoryImpl
 import com.example.myinjectiondependency.domain.usecase.MainUseCase
 
 class MainActivity : AppCompatActivity() {
@@ -27,7 +30,9 @@ class MainActivity : AppCompatActivity() {
         findViewById(R.id.main_button_load_contract)
     }
 
-    private val repository: MainRepository = MainResponseImpl()
+    private val service: MyInjectionService = MyInjectionServiceMock()
+    private val dataSource: MyInjectionDataSource = MyInjectionDataSourceImpl()
+    private val repository: MainRepository = MainRepositoryImpl(dataSource, service)
     private val useCase = MainUseCase(repository)
     private val mainViewModel: MainViewModel by lazy {
         MainViewModel(useCase)
@@ -58,11 +63,11 @@ class MainActivity : AppCompatActivity() {
         mainViewModel.loadContracts()
     }
 
-    private fun makeResponse(response: MainResponse?) {
-        contractText.text = response?.let {
+    private fun makeResponse(response: MainState) {
+        contractText.text = (response as? MainState.Success)?.let {
             getString(R.string.main_contract_text, it.contractId)
         } ?: run {
-            getString(R.string.main_contract_text_error)
+            (response as? MainState.Failure)?.message ?: getString(R.string.main_contract_text_error)
         }
     }
 
