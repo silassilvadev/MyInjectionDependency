@@ -46,7 +46,7 @@ internal class MainModuleFactory(
     }
 }
 ```
-[MainModuleFactory](MainModuleFactory.kt)
+[MainModuleFactory](app/src/java/com.example.simplifyinjections.di.features.MainModuleFactory.kt)
 
 Implementação para inicializar os módulos
 
@@ -63,7 +63,7 @@ internal class ModulesInitializer {
     }
 }
 ```
-[ModulesInitializer](ModulesInitializer.kt)
+[ModulesInitializer](app/src/java/com.example.simplifyinjections.di.ModulesInitializer.kt)
 
 Depois é só utilizar na classe que precisa de injeção
 
@@ -77,8 +77,8 @@ class MainActivity : AppCompatActivity() {
     //...
 }
 ```
-[MainActivity](MainActivity.kt)
+[MainActivity](app/src/java/com.example.simplifyinjections.ui.main.MainActivity.kt)
 
 ### Evidências
 
-![](https://github.com/silassilvadev/simplify-injections/blob/docs/gifs/simplify-injections-record.gif =540x1200)
+[](docs/gifs/simplify-injections-record.gif)
